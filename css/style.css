@@ -483,7 +483,7 @@ main .gallery-section .custom-header h2 span {
   color: #ea6d27;
 }
 main .testimoni-section {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 main .testimoni-section .custom-header {
   font-size: 15px;
@@ -501,7 +501,8 @@ main .testimoni-section .testimonial-slider-wrap .tns-nav {
   position: absolute;
   bottom: -50px;
   left: 50%;
-  transform: translateY(-20%);
+  transform: translateY(-40%);
+  margin: 20px auto;
 }
 main .testimoni-section .testimonial-slider-wrap .tns-nav button {
   background: none;
@@ -595,6 +596,131 @@ main .testimoni-section .testimonial-block .quote i {
   line-height: 0;
   color: rgba(180, 180, 180, 0.5490196078);
   font-size: 40px;
+}
+main .contact-section {
+  background-color: #fff;
+}
+main .contact-section .custom-header {
+  font-size: 15px;
+}
+main .contact-section .custom-header h2 {
+  font-size: 50px;
+}
+main .contact-section .custom-header h2 span {
+  color: #ea6d27;
+}
+main .contact-section .info .contact-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+main .contact-section .info i {
+  display: block;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  background-color: #ea6d27;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+main .contact-section .info i:hover {
+  background-color: rgb(225.5696202532, 95.0316455696, 21.9303797468);
+}
+main .contact-section textarea {
+  field-sizing: content;
+  min-height: 100px;
+  resize: none;
+}
+main .contact-section .btn-primary {
+  padding: 8px 22px;
+  font-size: 16px;
+  border-radius: 4px 15px 4px 15px;
+  margin: 10px 0;
+  background-color: #ea6d27;
+  border-color: #ea6d27;
+}
+main .contact-section .btn-primary:active, main .contact-section .btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #ea6d27;
+}
+main .contact-section .btn-primary:hover {
+  border-color: rgb(225.5696202532, 95.0316455696, 21.9303797468);
+  background-color: rgb(225.5696202532, 95.0316455696, 21.9303797468);
+}
+main .contact-section .btn-primary {
+  width: 100%;
+}
+main .cta-section {
+  background-color: #fff;
+  padding-top: 6rem;
+}
+main .cta-section .cta-wrap {
+  border-radius: 40px;
+  margin-bottom: -50px;
+  padding: 40px;
+  background-image: url(../images/hero-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+}
+main .cta-section .cta-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(16, 26, 36, 0.7);
+}
+main .cta-section .cta-wrap .sub-form-wrap, main .cta-section .cta-wrap .sub-form {
+  position: relative;
+  z-index: 5;
+}
+main .cta-section .cta-wrap h3 {
+  font-size: 40px;
+  color: #f3f4f4;
+  margin-bottom: 28px;
+}
+main .cta-section .cta-wrap h3 span {
+  color: #ea6d27;
+}
+main .cta-section .cta-wrap input[type=email] {
+  padding: 20px 30px;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+}
+main .cta-section .cta-wrap .btn-primary {
+  padding: 8px 22px;
+  font-size: 16px;
+  border-radius: 4px 15px 4px 15px;
+  margin: 10px 0;
+  background-color: #ea6d27;
+  border-color: #ea6d27;
+}
+main .cta-section .cta-wrap .btn-primary:active, main .cta-section .cta-wrap .btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #ea6d27;
+}
+main .cta-section .cta-wrap .btn-primary:hover {
+  border-color: rgb(225.5696202532, 95.0316455696, 21.9303797468);
+  background-color: rgb(225.5696202532, 95.0316455696, 21.9303797468);
+}
+main .cta-section .cta-wrap .btn-primary {
+  position: absolute;
+  border-radius: 12px;
+  transform: translateY(-100%);
+  right: 12px;
 }
 
 @media (max-width: 576px) {
