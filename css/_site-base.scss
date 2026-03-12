@@ -1,0 +1,74 @@
+@use "sass:color";
+@import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$primary-color: #ea6d27;
+$white: #fff;
+$black: #000;
+$dark: #101a24;
+$light: #f3f4f4;
+$body-color: #5c6574;
+
+$font-sans: "Inter", sans-serif;
+$font-serif: "David Libre", serif;
+
+$transition-base: all 0.5s ease;
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+html {
+  overflow-x: hiden;
+}
+
+body {
+  background-color: $light;
+  font-family: $font-sans;
+  color: $dark;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-serif;
+}
+
+@mixin btn-base($bg-color) {
+  padding: 8px 22px;
+  font-size: 16px;
+  border-radius: 4px 15px 4px 15px;
+  margin: 10px 0;
+  background-color: $bg-color;
+  border-color: $bg-color;
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: $bg-color;
+  }
+  &:hover {
+    border-color: color.adjust($bg-color, $lightness: -5%);
+    background-color: color.adjust($bg-color, $lightness: -5%);
+  }
+}
