@@ -141,6 +141,10 @@ details {
 
   details {
     --open-size: min(70vh, 300px);
+
+    p{
+      font-size: 14px;
+    }
   }
 
   ::details-content {
