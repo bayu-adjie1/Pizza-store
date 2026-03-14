@@ -478,9 +478,6 @@ main .gallery-section .custom-header h2 {
 main .gallery-section .custom-header h2 span {
   color: #ea6d27;
 }
-main .testimoni-section {
-  min-height: 90vh;
-}
 main .testimoni-section .custom-header {
   font-size: 15px;
 }
@@ -497,8 +494,8 @@ main .testimoni-section .testimonial-slider-wrap .tns-nav {
   position: absolute;
   bottom: -50px;
   left: 50%;
-  transform: translateY(-40%);
-  margin: 20px auto;
+  transform: translateX(-50%);
+  margin: 40px auto;
 }
 main .testimoni-section .testimonial-slider-wrap .tns-nav button {
   background: none;
@@ -656,9 +653,6 @@ main .contact-section .btn-primary {
   main .hero-section .right .img-fluid {
     max-width: 250px !important;
   }
-  main .tns-nav {
-    left: 40% !important;
-  }
 }
 @media (max-width: 768px) {
   main .hero-section .right {
@@ -811,12 +805,26 @@ details:hover, details:has(summary:focus) {
 }
 .cta-section {
   background-color: #fff;
-  padding-top: 6rem;
-  min-height: 45vh;
+  padding-top: 5rem;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+.cta-section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f3f4f4;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 20%;
+  z-index: 2;
+  pointer-events: none;
 }
 .cta-section .cta-wrap {
+  position: relative;
   border-radius: 40px;
-  margin-bottom: -50px;
   padding: 40px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/hero-img.jpg);
   background-size: cover;
@@ -867,12 +875,11 @@ details:hover, details:has(summary:focus) {
 }
 
 footer {
-  padding-top: 6rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   font-size: 15px;
   position: relative;
   color: #5c6574;
-  z-index: -1;
 }
 footer .logo {
   width: 200px;
@@ -912,8 +919,7 @@ footer .social ul i {
   transition: all 0.5s ease;
 }
 footer .social ul i:hover {
-  background-color: #ea6d27;
-  border-color: #ea6d27;
+  background-color: #000;
   color: #fff;
 }
 footer .ex-link {

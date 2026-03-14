@@ -3,11 +3,26 @@
 
 .cta-section {
   background-color: #fff;
-  padding-top: 6rem;
-  min-height: 45vh;
+  padding-top: 5rem;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $light;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
   .cta-wrap {
+    position: relative;
     border-radius: 40px;
-    margin-bottom: -50px;
     padding: 40px;
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
@@ -48,12 +63,11 @@
 }
 
 footer {
-    padding-top: 6rem;
+    padding-top: 3rem;
   padding-bottom: 1rem;
   font-size: 15px;
   position: relative;
   color: $body-color;
-  z-index: -1;
 
   .logo {
     width: 200px;
@@ -96,8 +110,7 @@ footer {
         border: 1.5px solid $dark;
         transition: $transition-base;
         &:hover {
-          background-color: $primary-color;
-          border-color: $primary-color;
+          background-color: #000;
           color: #fff;
         }
       }
