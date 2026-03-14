@@ -1,1 +1,147 @@
-@use 'site-base' as *;
+@use "site-base" as *;
+@use "sass:color";
+
+.cta-section {
+  background-color: #fff;
+  padding-top: 6rem;
+  min-height: 45vh;
+  .cta-wrap {
+    border-radius: 40px;
+    margin-bottom: -50px;
+    padding: 40px;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      url(../images/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 4;
+    overflow: hidden;
+
+    .sub-form-wrap,
+    .sub-form {
+      position: relative;
+      z-index: 5;
+    }
+    h3 {
+      font-size: 40px;
+      color: $light;
+      margin-bottom: 28px;
+      span {
+        color: $primary-color;
+      }
+    }
+
+    input[type="email"] {
+      padding: 20px 30px;
+      height: 60px;
+      border-radius: 20px;
+      border: none;
+      box-shadow: none !important;
+    }
+
+    .btn-primary {
+      @include btn-base($primary-color);
+      border-radius: 12px;
+    }
+  }
+}
+
+footer {
+    padding-top: 6rem;
+  padding-bottom: 1rem;
+  font-size: 15px;
+  position: relative;
+  color: $body-color;
+  z-index: -1;
+
+  .logo {
+    width: 200px;
+  }
+
+  .footer-heading {
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+  }
+
+  .opening-hours {
+    display: flex;
+    justify-content: space-between;
+    span {
+      display: block;
+    }
+  }
+
+  a {
+    transition: $transition-base;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .social {
+    ul {
+      margin-top: 20px;
+      gap: 10px;
+      display: flex;
+      text-align: center;
+      i {
+        padding: 10px 12px;
+        background-color: none;
+        border-radius: 50%;
+        border: 1.5px solid $dark;
+        transition: $transition-base;
+        &:hover {
+          background-color: $primary-color;
+          border-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ex-link {
+    color: $primary-color;
+    font-weight: 600;
+
+    &:hover {
+      color: color.adjust($primary-color, $lightness: -25%);
+    }
+  }
+
+  .copyright {
+    border-top: 0.5px solid #b9b9b9;
+  }
+}
+
+@media (min-width: 577px) {
+  .cta-section {
+    .btn-primary {
+      position: absolute;
+      top: 34%;
+      transform: translateY(-50%);
+      right: 12px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .cta-section {
+    input {
+      padding: 20px !important;
+      height: 50px !important;
+    }
+    h3 {
+      font-size: 30px !important;
+    }
+    .btn-primary {
+      position: relative !important;
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+}

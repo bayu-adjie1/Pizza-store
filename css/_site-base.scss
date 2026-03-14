@@ -22,12 +22,8 @@ $xxl: 1400px;
 
 html {
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color #fefefe91;
 }
 
 body,
